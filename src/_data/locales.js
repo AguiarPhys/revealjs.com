@@ -7,4 +7,8 @@ module.exports = [
     label: '繁體中文',
     code: 'zh-Hant',
   },
+  {
+    label: 'Español',
+    code: 'es',
+  },
 ];
