@@ -4,13 +4,13 @@ title: Backgrounds
 layout: default
 ---
 
-# Slide Backgrounds
+# Fondos de diapositiva
 
-Slides are contained within a limited portion of the screen by default to allow them to fit any display and scale uniformly. You can apply full page backgrounds outside of the slide area by adding a `data-background` attribute to your `<section>` elements. Four different types of backgrounds are supported: color, image, video and iframe.
+De forma predeterminada, las diapositivas están contenidas dentro de una porción limitada de la pantalla para permitirles adaptarse a cualquier pantalla y escalar uniformemente. Puede aplicar fondos de página completa fuera del área de la diapositiva agregando un atributo `data-background` a sus elementos `<section>`. Se admiten cuatro tipos diferentes de fondos: color, imagen, video e iframe.
 
-## Color Backgrounds
+## Fondos de color
 
-All CSS color formats are supported, including hex values, keywords, `rgba()` or `hsl()`.
+Se admiten todos los formatos de color CSS, incluidos valores hexadecimales, palabras clave, `rgba()` o `hsl()`.
 
 ```html/0,3
 <section data-background-color="aquamarine">
@@ -32,9 +32,7 @@ All CSS color formats are supported, including hex values, keywords, `rgba()` or
   </div>
 </div>
 
-## Gradient Backgrounds
-
-All CSS gradient formats are supported, including `linear-gradient`, `radial-gradient` and `conic-gradient`.
+Se admiten todos los formatos de degradado CSS, incluidos `linear-gradient`, `radial-gradient` y `conic-gradient`.
 
 ```html/0,3
 <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
@@ -56,17 +54,17 @@ All CSS gradient formats are supported, including `linear-gradient`, `radial-gra
   </div>
 </div>
 
-## Image Backgrounds
+## Fondos de imagen
 
-By default, background images are resized to cover the full page. Available options:
+De forma predeterminada, las imágenes de fondo se redimensionan para cubrir toda la página. Opciones disponibles:
 
 | Attribute                | Default <div style="width:80px"></div> | Description                                                                                       |
 | :----------------------- | :------------------------------------- | :------------------------------------------------------------------------------------------------ |
-| data-background-image    |                                        | URL of the image to show. GIFs restart when the slide opens.                                      |
-| data-background-size     | cover                                  | See [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) on MDN.         |
-| data-background-position | center                                 | See [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) on MDN. |
-| data-background-repeat   | no-repeat                              | See [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) on MDN.     |
-| data-background-opacity  | 1                                      | Opacity of the background image on a 0-1 scale. 0 is transparent and 1 is fully opaque.           |
+| data-background-image    |                                        | URL de la imagen. Los GIFs reinician cuando inicia la diapositiva.                                |
+| data-background-size     | cover                                  | Vea [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) en MDN.         |
+| data-background-position | center                                 | Vea [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) en MDN. |
+| data-background-repeat   | no-repeat                              | Vea [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) en MDN.     |
+| data-background-opacity  | 1                                      | Controla la opacidad de la imagen de fondo (entre 0 y 1). 0 es transparente y 1 es completamente opaco.|
 
 {.nowrap-1st}
 
@@ -80,17 +78,17 @@ By default, background images are resized to cover the full page. Available opti
 </section>
 ```
 
-## Video Backgrounds
+## Fondo de videos
 
-Automatically plays a full size video behind the slide.
+Automáticamente reproduce un video en pantalla completa detrás de la diapositiva.
 
-| Attribute                   | Default | Description                                                                             |
-| :-------------------------- | :------ | :-------------------------------------------------------------------------------------- |
-| data-background-video       |         | A single video source, or a comma separated list of video sources.                      |
-| data-background-video-loop  | false   | Flags if the video should play repeatedly.                                              |
-| data-background-video-muted | false   | Flags if the audio should be muted.                                                     |
-| data-background-size        | cover   | Use `cover` for full screen and some cropping or `contain` for letterboxing.            |
-| data-background-opacity     | 1       | Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
+| Atributo                   | Predeterminado | Descripción                                                                                 |
+| :-------------------------- | :------ | :------------------------------------------------------------------------------------------------ |
+| data-background-video       |         | Una sola fuente de video o una lista separada por comas de fuentes de video.                      |
+| data-background-video-loop  | false   | Indica si el video debe reproducirse repetidamente.                                               |
+| data-background-video-muted | false   | Indica si el audio debe estar silenciado.                                                         |
+| data-background-size        | cover   | Usa `cover` para pantalla completa y algún recorte o `contain` para "letterboxing".               |
+| data-background-opacity     | 1       | Opacidad del video de fondo en una escala de 0 a 1. 0 es transparente y 1 es completamente opaco. |
 
 {.nowrap-1st}
 
@@ -110,14 +108,14 @@ Automatically plays a full size video behind the slide.
   </div>
 </div>
 
-## Iframe Backgrounds
+## Fondos Iframe
 
-Embeds a web page as a slide background that covers 100% of the reveal.js width and height. The iframe is in the background layer, behind your slides, and as such it's not possible to interact with it by default. To make your background interactive, you can add the `data-background-interactive` attribute.
+Incorpora una página web como fondo de diapositiva que cubre el 100% del ancho y alto de reveal.js. El iframe está en la capa de fondo, detrás de tus diapositivas, por lo que no es posible interactuar con él en la configuración predeterminada. Para hacer que tu fondo sea interactivo, puedes agregar el atributo `data-background-interactive`.
 
-| Attribute                   | Default | Description                                                                                                                                     |
-| :-------------------------- | :------ | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| data-background-iframe      |         | URL of the iframe to load                                                                                                                       |
-| data-background-interactive | false   | Include this attribute to make it possible to interact with the iframe contents. Enabling this will prevent interaction with the slide content. |
+| Atributo                   | Predeterminado | Description                                                                                                                                     |
+| :-------------------------- | :------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| data-background-iframe      |         | URL del iframe a cargar                                                                                                                   |
+| data-background-interactive | false   | Incluye este atributo para poder interactuar con el contenido del iframe. Esto evitará que interactues con el contenido de la diapositiva.|
 
 {.nowrap-1st}
 
@@ -128,15 +126,15 @@ Embeds a web page as a slide background that covers 100% of the reveal.js width 
 </section>
 ```
 
-Iframes are lazy-loaded when they become visible. If you'd like to preload iframes ahead of time, you can append a `data-preload` attribute to the slide `<section>`. You can also enable preloading globally for all iframes using the `preloadIframes` configuration option.
+Los iframes se cargan de forma diferida cuando se vuelven visibles. Si desea precargar los iframes con anticipación, puede agregar un atributo `data-preload` a la sección `<section>` de la diapositiva. También puede habilitar la precarga globalmente para todos los iframes utilizando la opción de configuración `preloadIframes`.
 
-## Background Transitions
+## Transiciones de fondo
 
-We'll use a cross fade to transition between slide backgrounds by default. This can be changed using the [`backgroundTransition`](/transitions/#background-transitions) config option.
+Utilizaremos una transición de desvanecimiento cruzado entre los fondos de diapositiva de forma predeterminada. Esto se puede cambiar usando la opción de configuración [`backgroundTransition`](/transitions/#background-transitions).
 
-## Parallax Background
+## Fondo Parallax
 
-If you want to use a parallax scrolling background, set the first two properties below when initializing reveal.js (the other two are optional).
+Si desea utilizar un fondo con desplazamiento paralaje, establezca las dos primeras propiedades a continuación al inicializar reveal.js (las otras dos son opcionales).
 
 ```javascript/1-11
 Reveal.initialize({
@@ -144,14 +142,13 @@ Reveal.initialize({
   parallaxBackgroundImage: '', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
   // Parallax background size
-  parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+  parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - actualmente solo puedes usar pixeles only píxeles (no uses % o auto)
 
-  // Number of pixels to move the parallax background per slide
-  // - Calculated automatically unless specified
-  // - Set to 0 to disable movement along an axis
+  //  Número de píxeles para mover el fondo de parallax por diapositiva
+  // - Calculado automáticamente, a menos que lo especifiques
+  // - Poner en 0 para inhabilitar el movimiento a lo largo de un eje.
   parallaxBackgroundHorizontal: 200,
   parallaxBackgroundVertical: 50
 });
 ```
-
-Make sure that the background size is much bigger than screen size to allow for some scrolling. [View example](/demo?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px).
+Asegúrese de que el tamaño de fondo sea mucho mayor que el tamaño de la pantalla para permitir cierto desplazamiento. [Ejemplo](/demo?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px).

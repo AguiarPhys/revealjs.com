@@ -4,13 +4,13 @@ title: Presenting Code
 layout: default
 ---
 
-# Presenting Code
+# Presentar Código
 
-reveal.js includes a powerful set of features aimed at presenting syntax highlighted code — powered by [highlight.js](https://highlightjs.org/). This functionality lives in the highlight plugin and is included in our default presentation boilerplate.
+reveal.js incluye un poderoso conjunto de funciones destinadas a presentar código resaltado por sintaxis, gracias a [highlight.js](https://highlightjs.org/). Esta funcionalidad se encuentra en el plugin de resaltado y se incluye en nuestra plantilla de presentación predeterminada.
 
-Below is an example with clojure code that will be syntax highlighted. When the `data-trim` attribute is present, surrounding whitespace within the `<code>` is automatically removed.
+A continuación se muestra un ejemplo con código de clojure que se resaltará sintácticamente. Cuando el atributo `data-trim` está presente, los espacios en blanco dentro del elemento `<code>` se eliminan automáticamente.
 
-HTML will be escaped by default. To avoid this, add `data-noescape` to the `<code>` element.
+El HTML no se ejecutará por defecto. Para evitar esto, agregue `data-noescape` al elemento `<code>`.
 
 ```html
 <section>
@@ -38,10 +38,8 @@ HTML will be escaped by default. To avoid this, add `data-noescape` to the `<cod
   </div>
 </div>
 
-## Theming
-
-Make sure that a syntax highlight theme is included in your document. We include Monokai by default, which is distributed with the reveal.js repo at [plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/plugin/highlight/monokai.css). A full list of available themes can be found at <https://highlightjs.org/demo/>.
-
+## Temas
+Asegúrese de que su documento incluya un tema de resaltado de sintaxis. Incluimos Monokai de forma predeterminada, que se distribuye con el repositorio reveal.js en [plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/plugin/highlight/monokai.css). Puede encontrar una lista completa de temas disponibles en <https://highlightjs.org/demo/>.
 ```html
 <link rel="stylesheet" href="plugin/highlight/monokai.css" />
 <script src="plugin/highlight/highlight.js"></script>
@@ -52,9 +50,9 @@ Make sure that a syntax highlight theme is included in your document. We include
 </script>
 ```
 
-## Line Numbers & Highlights
+## Números de línea y resaltados
 
-You can enable line numbers by adding `data-line-numbers` to your `<code>` tags. If you want to highlight specific lines you can provide a comma separated list of line numbers using the same attribute. For example, in the following example lines 3 and 8-10 are highlighted:
+Puede habilitar los números de línea agregando `data-line-numbers` a sus etiquetas `<code>`. Si desea resaltar líneas específicas, puede proporcionar una lista separada por comas de números de línea usando el mismo atributo. Por ejemplo, en el siguiente ejemplo, las líneas 3 y 8-10 están resaltadas:
 
 ```html
 <pre><code data-line-numbers="3,8-10">
@@ -94,9 +92,9 @@ You can enable line numbers by adding `data-line-numbers` to your `<code>` tags.
   </div>
 </div>
 
-#### Line Number Offset <span class="r-version-badge new">4.2.0</span>
+#### Desplazamiento del número de línea <span class="r-version-badge new">4.2.0</span>
 
-You can offset the line number if you want to showcase a excerpt of a longer set of code. In the example below, we set `data-ln-start-from="7"` to make the line numbers start from 7.
+Puede desplazar el número de línea si desea mostrar un extracto de un conjunto de código más largo. En el siguiente ejemplo, establecemos `data-ln-start-from="7"` para que los números de línea comiencen desde 7.
 
 ```html
 <pre><code data-line-numbers data-ln-start-from="7">
@@ -122,9 +120,9 @@ You can offset the line number if you want to showcase a excerpt of a longer set
   </div>
 </div>
 
-## Step-by-step Highlights
+## Resaltados paso a paso
 
-You can step through multiple code highlights on the same code block. Delimit each of your highlight steps with the `|` character. For example `data-line-numbers="1|2-3|4,6-10"` will produce three steps. It will start by highlighting line 1, next step is lines 2-3, and finally line 4 and 6 through 10.
+Puede recorrer múltiples resaltados de código en el mismo bloque de código. Delimite cada uno de sus pasos de resaltado con el carácter `|`. Por ejemplo, `data-line-numbers="1|2-3|4,6-10"` producirá tres pasos. Comenzará resaltando la línea 1, el siguiente paso son las líneas 2-3 y finalmente la línea 4 y del 6 al 10.
 
 ```html
 <pre><code data-line-numbers="3-5|8-10|13-15">
@@ -174,11 +172,11 @@ You can step through multiple code highlights on the same code block. Delimit ea
   </div>
 </div>
 
-## HTML Entities <span class="r-version-badge new">4.1.0</span>
+## Entidades HTML <span class="r-version-badge new">4.1.0</span>
 
-Content added inside of a `<code>` block is parsed as HTML by the web browser. If you have HTML characters (<>) in your code you will need to escape them ($lt; $gt;).
+El contenido agregado dentro de un bloque `<code>` se analiza como HTML por el navegador. Si tiene caracteres HTML (<>) en su código, deberá escaparlos ($lt; $gt;).
 
-To avoid having to escape these characters manually, you can wrap your code in `<script type="text/template">` and we'll handle it for you.
+Para evitar tener que escapar estos caracteres manualmente, puedes envolver tu código en `<script type="text/template">` y nosotros lo manejaremos por ti.
 
 ```html
 <pre><code><script type="text/template">
@@ -189,9 +187,9 @@ sealed class Either<out A, out B> {
 </script></code></pre>
 ```
 
-## The highlight.js API & beforeHighlight <span class="r-version-badge new">4.2.0</span>
+## API de highlight.js y beforeHighlight <span class="r-version-badge new">4.2.0</span>
 
-If you want to interact with highlight.js before your code is highlighted you can use the `beforeHighlight` callback. For example, this can be useful if you want to register a new language via the [highlight.js API](https://highlightjs.readthedocs.io/en/latest/api.html).
+Si desea interactuar con highlight.js antes de que se resalte su código, puedes usar `beforeHighlight`. Por ejemplo, esto puede ser útil si deseas registrar un nuevo idioma a través de la [API de highlight.js](https://highlightjs.readthedocs.io/en/latest/api.html).
 
 ```js
 Reveal.initialize({
@@ -202,9 +200,9 @@ Reveal.initialize({
 });
 ```
 
-## Manual Highlighting
+## Resaltado manual
 
-All of your code blocks are automatically syntax highlighted when reveal.js starts. If you want to disable this behavior and trigger highlighting on your own you can set the `highlightOnLoad` flag to false.
+Todos sus bloques de código se resaltan automáticamente cuando se inicia reveal.js. Si desea deshabilitar este comportamiento y activar el resaltado por su cuenta, puede establecer el indicador `highlightOnLoad` en "false".
 
 ```js
 Reveal.initialize({
