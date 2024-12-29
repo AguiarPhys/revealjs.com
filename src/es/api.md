@@ -6,17 +6,15 @@ layout: default
 
 # API
 
-Proveemos un extensivo API de JavaScript para controlar la navegación y comprobar el estado actual de la presentación. Si estás trabajando en una sola presentación, la API puede ser accedida a través del objeto global `Reveal`.
-
-We provide an extensive JavaScript API for controlling navigation and checking the current state of a presentation. If you're working with a single presentation instance the API can be accessed via the global `Reveal` object.
+Proveemos un API de JavaScript extensivo para controlar la navegación y comprobar el estado actual de la presentación. Si estás trabajando en una sola presentación, podrás acceder a la API a través del objeto global `Reveal`.
 
 ### Navegación
 
 ```javascript
-// Navigate to a specific slide
+// Navegar a una diapositiva en particular
 Reveal.slide(indexh, indexv, indexf);
 
-// Relative navigation
+// Navegación relativa
 Reveal.left();
 Reveal.right();
 Reveal.up();
@@ -24,95 +22,95 @@ Reveal.down();
 Reveal.prev();
 Reveal.next();
 
-// Fragment navigation
+// Navegación fragmentada
 Reveal.navigateFragment(indexf); // (-1 means all fragments are invisible)
 Reveal.prevFragment();
 Reveal.nextFragment();
 
-// Checks which directions we can navigate towards
+// Comprueba a qué direcciones puedes navegar
 // {top: false, right: true, bottom: false, left: false}
 Reveal.availableRoutes();
 
-// Checks which fragment directions we can navigate towards
+// Comprueba a qué fragmentos de dirección podemos navegar.
 // {prev: false, next: true}
 Reveal.availableFragments();
 ```
 
-### Misc
+### Misceláneos
 
 ```javascript
-// Call this if you add or remove slides to update controls, progress, etc
+// Ejecuta esta función si añades o remueves diapositivas para actualizar los controles, el progreso, etc. 
 Reveal.sync();
-// Call this to sync just one slide
+// Ejecuta esta función para sincronizar solo una diapositiva
 Reveal.syncSlide((slide = currentSlide));
-// Call this to sync just one slide's fragments
+// Ejecuta esta función para sincronizar los fragmentos de una diapositiva
 Reveal.syncFragments((slide = currentSlide));
 
-// Call this to update the presentation scale based on available viewport
+// Ejecuta esta función para actualizar la escala de la presentación en función del área de visualización disponible
 Reveal.layout();
 
-// Randomize the order of slides
+// Aleatorizar el orden de las diapositivas
 Reveal.shuffle();
 
-// Returns the present configuration options
+// Muestra las opciones de configuración actuales
 Reveal.getConfig();
 
-// Fetch the current scale of the presentation
+// Muestra la escala actual de la presentación
 Reveal.getScale();
 
-// Returns an object with the scaled presentationWidth & presentationHeight
+// Devuelve un objecto con presentationWidth y presentationHeight a escala
 Reveal.getComputedSlideSize();
 
 Reveal.getIndices((slide = currentSlide)); // Coordinates of the slide (e.g. { h: 0, v: 0, f: 0 })
 Reveal.getProgress(); // (0 == first slide, 1 == last slide)
 
-// Array of key:value maps of the attributes of each slide in the deck
+// Arreglos de mapas key:value de los atributos de cada diapositiva
 Reveal.getSlidesAttributes();
 
-// Returns the slide background element at the specified index
+// Devuelve los elemetos del fondo de la diapositiva en el índice especificado
 Reveal.getSlideBackground(indexh, indexv);
 
-// Returns the speaker notes for the slide
+// Devuelve las notas del presentador para la diapositiva
 Reveal.getSlideNotes((slide = currentSlide));
 
-// Retrieves query string as a key:value map
+// Devuelve la cadena de consulta como un mapa key:value
 Reveal.getQueryHash();
 
-// Returns the path to the slide as represented in the URL
+// Devuelve la ruta hacia la diapositiva según su representación en la URL
 Reveal.getSlidePath((slide = currentSlide));
 ```
 
-### Slides
+### Diapositivas
 
 ```javascript
-// Returns the slide element matching the specified index
+// Devuelve el elemento de diapositiva que coincide con el índice especificado
 Reveal.getSlide(indexh, indexv);
 
-// Retrieves the previous and current slide elements
+// Recupera los elementos de diapositiva anterior y actual
 Reveal.getPreviousSlide();
 Reveal.getCurrentSlide();
 
-// Returns an all horizontal/vertical slides in the deck
+// Devuelve todas las diapositivas horizontales/verticales de la presentación
 Reveal.getHorizontalSlides();
 Reveal.getVerticalSlides();
 
-// Total number of slides
+// Número total de diapositivas
 Reveal.getTotalSlides();
 Reveal.getSlidePastCount();
 
-// Array of all slides
+// Arreglo de todas las diapositivas
 Reveal.getSlides();
 ```
 
-### Slide State
+### Estado de la diapositiva
 
 ```javascript
-// Checks if the presentation contains two or more
-// horizontal/vertical slides
+// Comprueba si la presentación incluye dos o más 
+// diapositivas horizontales/verticales
 Reveal.hasHorizontalSlides();
 Reveal.hasVerticalSlides();
 
-// Checks if the deck has navigated on either axis at least once
+// Comprueba si la presentación se ha movido en algún eje al menos una vez
 Reveal.hasNavigatedHorizontally();
 Reveal.hasNavigatedVertically();
 
@@ -122,14 +120,14 @@ Reveal.isVerticalSlide();
 Reveal.isLastVerticalSlide();
 ```
 
-### Modes
+### Modos
 
 ```javascript
-// Shows a help overlay with keyboard shortcuts, optionally pass true/false
-// to force on/off
+// Muestra una superposición de ayuda con atajos de teclado, opcionalmente pasa verdadero/falso 
+// para forzar encendido/apagado
 Reveal.toggleHelp();
 
-// Toggle presentation states, optionally pass true/false to force on/off
+// Alterna estados de presentación, opcionalmente pasa verdadero/falso para forzar encendido/apagado
 Reveal.toggleOverview();
 Reveal.toggleAutoSlide();
 Reveal.togglePause();
@@ -139,16 +137,16 @@ Reveal.isAutoSliding();
 Reveal.isPaused();
 ```
 
-### DOM Elements
+### Elementos DOM
 
 ```javascript
-// Retrieve key DOM elements
+// Recuperar elementos DOM clave
 Reveal.getRevealElement(); // <div class="reveal">
 Reveal.getSlidesElement(); // <div class="slides">
 Reveal.getViewportElement(); // <div class="reveal-viewport">
 Reveal.getBackgroundsElement(); // <div class="backgrounds">
 ```
 
-## More Reading
+## Lecturas Adicionales
 
 - [Plugin API](/plugins/#api)

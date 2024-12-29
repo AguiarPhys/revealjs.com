@@ -6,7 +6,7 @@ layout: default
 
 # Auto-Slide
 
-Presentations can be configured to step through slides automatically, without any user input. To enable this you will need to specify an interval for slide changes using the `autoSlide` config option. The interval is provided in milliseconds.
+Las presentaciones se pueden configurar para que avancen a través de las diapositivas automáticamente, sin ninguna entrada del usuario. Para habilitar esto, deberá especificar un intervalo para los cambios de diapositiva utilizando la opción de configuración `autoSlide`. El intervalo se proporciona en milisegundos.
 
 ```javascript
 // Slide every five seconds
@@ -24,13 +24,13 @@ Reveal.initialize({
   </div>
 </div>
 
-A play/pause control element will automatically appear for auto-sliding decks. Sliding is automatically paused if the user starts interacting with the deck. It's also possible to pause or resume sliding by pressing »A« on the keyboard (won't work in the embedded demo here).
+Un elemento de control de reproducción/pausa aparecerá automáticamente para las presentaciones con "auto-slide". El deslizamiento se pausa automáticamente si el usuario comienza a interactuar con la presentación. También es posible pausar o reanudar el deslizamiento presionando »A« en el teclado (no funcionará en la demostración integrada aquí).
 
-You can disable the auto-slide controls and prevent sliding from being paused by specifying `autoSlideStoppable: false` in your [config options](/config/).
+Puede deshabilitar los controles de "auto-slide" e impedir que el deslizamiento se pause especificando `autoSlideStoppable: false` en sus [opciones de configuración](/config/).
 
-## Slide Timing
+## Sincronización de diapositiva
 
-It's also possible to override the slide duration for individual slides and fragments by using the `data-autoslide` attribute.
+También es posible anular la duración de la diapositiva para diapositivas y fragmentos individuales utilizando el atributo `data-autoslide`.
 
 ```html
 <section data-autoslide="2000">
@@ -44,11 +44,11 @@ It's also possible to override the slide duration for individual slides and frag
 </section>
 ```
 
-## Auto-Slide Method
+## Método Auto-Slide
 
-The `autoSlideMethod` config option can be used to override the default function used for navigation when auto-sliding.
+La opción de configuración `autoSlideMethod` se puede usar para anular la función predeterminada utilizada para la navegación con "auto-slide".
 
-We step through all slides, both horizontal and [vertical](/vertical-slides/), by default. To only navigate along the top layer and ignore vertical slides, you can provide a method that calls `Reveal.right()`.
+De forma predeterminada, avanzamos a través de todas las diapositivas, tanto horizontales como [verticales](/vertical-slides/). Para navegar solo a lo largo de la capa superior e ignorar las diapositivas verticales, puede proporcionar un método que llame a `Reveal.right()`.
 
 ```js
 Reveal.configure({
@@ -56,9 +56,9 @@ Reveal.configure({
 });
 ```
 
-## Events
+## Eventos
 
-We fire events whenever auto-sliding is paused or resumed.
+Ejecutamos eventos cada vez que se pausa o reanuda el "auto-slide".
 
 ```javascript
 Reveal.on('autoslideresumed', (event) => {

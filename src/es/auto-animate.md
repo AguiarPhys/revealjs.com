@@ -4,11 +4,11 @@ title: Auto-Animate
 layout: default
 ---
 
-# Auto-Animate <span class="r-version-badge new">4.0.0</span>
+# Auto-Animar <span class="r-version-badge new">4.0.0</span>
 
-reveal.js can automatically animate elements across slides. All you need to do is add `data-auto-animate` to two adjacent slide `<section>` elements and Auto-Animate will animate all matching elements between the two.
+reveal.js puede animar elementos automáticamente entre diapositivas. Solo necesitas agregar el atributo `data-auto-animate` a dos elementos `<section>` de diapositivas adyacentes, y Auto-Animar animará todos los elementos coincidentes entre ambos.
 
-Here's a simple example to give you a better idea of how it can be used.
+Aquí hay un ejemplo simple para darte una mejor idea de cómo se puede usar.
 
 ```html
 <section data-auto-animate>
@@ -30,11 +30,11 @@ Here's a simple example to give you a better idea of how it can be used.
   </div>
 </div>
 
-This example uses the `margin-top` property to move the element but internally reveal.js will use a CSS transform to ensure smooth movement. This same approach to animation works with most animatable CSS properties meaning you can transition things like `position`, `font-size`, `line-height`, `color`, `background-color`, `padding` and `margin`.
+En este ejemplo, se utiliza la propiedad `margin-top` para mover el elemento, pero internamente reveal.js utilizará una transformación CSS para garantizar un movimiento suave. Este mismo enfoque de animación funciona con la mayoría de las propiedades CSS animables, lo que significa que puedes realizar transiciones en elementos como `position`, `font-size`, `line-height`, `color`, `background-color`, `padding` y `margin`.
 
-### Movement Animations
+### Animaciones de Movimiento
 
-Animations are not limited to changes in style. Auto-Animate can also be used to automatically move elements into their new position as content is added, removed or rearranged on a slide. All without a single line of inline CSS.
+Las animaciones no se limitan a cambios de estilo. Auto-Animate también se puede usar para mover automáticamente elementos a su nueva posición a medida que se agrega, elimina o reorganiza contenido en una diapositiva. Todo esto sin una sola línea de CSS.
 
 ```html
 <section data-auto-animate>
@@ -58,13 +58,13 @@ Animations are not limited to changes in style. Auto-Animate can also be used to
   </div>
 </div>
 
-## How Elements are Matched
+## Cómo se hacen coincidir los elementos
 
-When you navigate between two auto-animated slides we'll do our best to automatically find matching elements in the two slides. For text, we consider it a match if both the text contents and node type are identical. For images, videos and iframes we compare the `src` attribute. We also take into account the order in which the element appears in the DOM.
+Al navegar entre dos diapositivas con animación automática, haremos todo lo posible para encontrar automáticamente elementos coincidentes en las dos diapositivas. Para el texto, consideramos que hay una coincidencia si tanto el contenido del texto como el tipo de nodo son idénticos. Para imágenes, videos e iframes, comparamos el atributo `src`. También tenemos en cuenta el orden en que aparece el elemento en el DOM.
 
-In situations where automatic matching is not feasible you can give the objects that you want to animate between a matching `data-id` attribute. We prioritize matching `data-id` values above our automatic matching.
+En situaciones en las que la coincidencia automática no es factible, puede asignar a los objetos que desea animar entre sí un atributo data-id coincidente. Priorizamos los valores data-id coincidentes sobre nuestra coincidencia automática.
 
-Here's an example where we've given both blocks a matching ID since automatic matching has no content to go on.
+Aquí hay un ejemplo donde hemos dado a ambos bloques un ID coincidente ya que la coincidencia automática no tiene contenido en el que basarse.
 
 ```html
 <section data-auto-animate>
@@ -86,11 +86,11 @@ Here's an example where we've given both blocks a matching ID since automatic ma
   </div>
 </div>
 
-## Animation Settings
+## Configuración de Animación
 
-You can override specific animation settings such as easing and duration either for the whole presentation, per-slide or individually for each animated element. The following configuration attributes can be used to change the settings for a specific slide or element:
+Puede anular configuraciones de animación específicas, como el suavizado (easing) y la duración, ya sea para toda la presentación, por diapositiva o individualmente para cada elemento animado. Los siguientes atributos de configuración se pueden usar para cambiar la configuración de una diapositiva o elemento específico:
 
-| Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |  Default | Description                                                                                                                  |
+| Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |  Por Defecto | Descripción                                                                                                                  |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------: | :--------------------------------------------------------------------------------------------------------------------------- |
 | data-auto-animate-easing                                                                                                                                                                                                                                                          |     ease | A CSS [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function).                                   |
 | data-auto-animate-unmatched                                                                                                                                                                                                                                                       |     true | Determines whether elements with no matching auto-animate target should fade in. Set to false to make them appear instantly. |
@@ -99,7 +99,7 @@ You can override specific animation settings such as easing and duration either 
 | data-auto-animate-id                                                                                                                                                                                                                                                              | _absent_ | An [id](#auto-animate-id-%26-restart) tying auto-animate slides together.                                                    |
 | data-auto-animate-restart                                                                                                                                                                                                                                                         | _absent_ | [Breaks apart](#auto-animate-id-%26-restart) two adjacent auto-animate slides (even with the same id).                       |
 
-If you'd like to change the defaults for the whole deck, use the following config options:
+Si desea cambiar los valores predeterminados para toda la presentación, usa las siguientes opciones de configuración:
 
 ```javascript
 Reveal.initialize({
@@ -109,13 +109,13 @@ Reveal.initialize({
 });
 ```
 
-## Auto-Animate Id & Restart
+## Auto Animar ID y Reinicio
 
-When you want separate groups of auto-animated slides right next to each other you can use the `data-auto-animate-id` and `data-auto-animate-restart` attributes.
+Cuando desees grupos separados de diapositivas con animación automática una al lado de la otra, puedes utilizar los atributos `data-auto-animate-id` y `data-auto-animate-restart`.
 
-With `data-auto-animate-id` you can specify arbitrary ids for your slides. Two adjacent slides will only auto-animate if they have the same id or if both don't have one.
+Con `data-auto-animate-id` puedes especificar identificadores arbitrarios para tus diapositivas. Dos diapositivas adyacentes solo se animarán automáticamente si tienen el mismo ID o si ninguna de las dos lo tiene.
 
-Another way to control auto-animate is the `data-auto-animate-restart` attribute. Applying this attribute to a slide will prevent auto-animate between the previous slide and it (even if they have the same id) but _not_ between it and the next slide.
+Otra forma de controlar la animación automática es mediante el atributo `data-auto-animate-restart`. Aplicar este atributo a una diapositiva evitará la animación automática entre la diapositiva anterior y esta (incluso si tienen el mismo ID), pero _no_ entre esta y la siguiente diapositiva.
 
 ```html
 <section data-auto-animate>
@@ -161,9 +161,9 @@ Another way to control auto-animate is the `data-auto-animate-restart` attribute
 	</div>
 </div>
 
-## Events
+## Eventos
 
-The `autoanimate` event is dispatched each time you step between two auto-animated slides.
+El evento autoanimate se despacha cada vez que se avanza entre dos diapositivas con animación automática.
 
 ```javascript
 Reveal.on('autoanimate', (event) => {
@@ -171,9 +171,9 @@ Reveal.on('autoanimate', (event) => {
 });
 ```
 
-## Example: Animating Between Code Blocks
+## Ejemplo: Animando entre bloques de código
 
-We support animations between code blocks. Make sure that the code block has `data-line-numbers` enabled and that all blocks have a matching `data-id` value.
+Admitimos animaciones entre bloques de código. Asegurate de que el bloque de código tenga habilitado `data-line-numbers` y de que todos los bloques tengan un valor `data-id` coincidente.
 
 ```html
 <section data-auto-animate>
@@ -245,9 +245,9 @@ We support animations between code blocks. Make sure that the code block has `da
   </div>
 </div>
 
-## Example: Animating Between Lists
+## Ejemplo: Animando entre listas
 
-We match list items individually to let you animate new items being added or removed.
+Hacemos coincidir los elementos de la lista individualmente para permitirle animar la adición o eliminación de nuevos elementos.
 
 ```html/2-4,10,12
 <section data-auto-animate>
@@ -289,10 +289,10 @@ We match list items individually to let you animate new items being added or rem
   </div>
 </div>
 
-## Advanced: State Attributes
+## Advanced: Avanzado: Atributos de estado
 
-We add state attributes to the different elements involved in an auto-animation. These attributes can be tied into if you want to, for example, fine-tune the animation behavior with custom CSS.
+Agregamos atributos de estado a los diferentes elementos involucrados en una animación automática. Estos atributos se pueden vincular si desea, por ejemplo, ajustar el comportamiento de la animación con CSS personalizado.
 
-Right before an auto-animation starts we add `data-auto-animate="pending"` to the slide `<section>` coming into view. At this point the upcoming slide is visible and all of the animated elements have been moved to their starting positions. Next we switch to `data-auto-animate="running"` to indicate when the elements start animating towards their final properties.
+Justo antes de que comience una animación automática, agregamos `data-auto-animate="pending"` al elemento `<section>` de la diapositiva que entra en vista. En este punto, la próxima diapositiva es visible y todos los elementos animados se han movido a sus posiciones iniciales. Luego cambiamos a `data-auto-animate="running"` para indicar cuándo los elementos comienzan a animarse hacia sus propiedades finales.
 
-Each individual element is decorated with a `data-auto-animate-target` attribute. The value of the attribute is a unique ID for this particular animation OR "unmatched" if this element should animate as unmatched content.
+Cada elemento individual está decorado con un atributo `data-auto-animate-target`. El valor del atributo es un ID único para esta animación en particular o "unmatched" si este elemento debe animarse como contenido no coincidente.
