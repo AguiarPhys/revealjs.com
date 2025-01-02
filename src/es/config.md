@@ -4,177 +4,174 @@ title: Config
 layout: default
 ---
 
-# Configuration Options
+# Opciones de Configuración
 
-Presentation behavior can be fine-tuned using a wide array of configuration options. These objects can be included where you [initialize](/initialization/) reveal.js. It's also possible to [change config values at runtime](#reconfiguring).
+El comportamiento de la presentación se puede ajustar con precisión utilizando una amplia gama de opciones de configuración. Estos objetos se pueden incluir donde [inicializas](/initialization/) reveal.js. También es posible [cambiar los valores de configuración en momento de ejecución](#reconfiguring).
 
-Note that **all** configuration values are **optional** and will default to the values specified below.
+Tenga en cuenta que **todos** los valores de configuración son **opcionales** y tomarán de forma predeterminada los valores especificados a continuación.
 
 ```javascript
 Reveal.initialize({
-  // Display presentation control arrows
+  // Mostrar flechas de control de presentación
   controls: true,
 
-  // Help the user learn the controls by providing hints, for example by
-  // bouncing the down arrow when they first encounter a vertical slide
+  // Ayudar al usuario a aprender los controles proporcionando sugerencias, por ejemplo,
+  // haciendo rebotar la flecha hacia abajo cuando encuentran una diapositiva vertical por primera vez
   controlsTutorial: true,
 
-  // Determines where controls appear, "edges" or "bottom-right"
+  // Determina dónde aparecen los controles, "edges" o "bottom-right"
   controlsLayout: 'bottom-right',
 
-  // Visibility rule for backwards navigation arrows; "faded", "hidden"
-  // or "visible"
+  // Regla de visibilidad para las flechas de navegación hacia atrás; "faded", "hidden"
+  // o "visible"
   controlsBackArrows: 'faded',
 
-  // Display a presentation progress bar
+  // Mostrar una barra de progreso de la presentación
   progress: true,
 
-  // Display the page number of the current slide
-  // - true:    Show slide number
-  // - false:   Hide slide number
+  // - true:    Mostrar número de diapositiva
+  // - false:   Ocultar número de diapositiva
   //
-  // Can optionally be set as a string that specifies the number formatting:
-  // - "h.v":   Horizontal . vertical slide number (default)
-  // - "h/v":   Horizontal / vertical slide number
-  // - "c":   Flattened slide number
-  // - "c/t":   Flattened slide number / total slides
+  // Se puede establecer opcionalmente como una cadena que especifica el formato del número:
+  // - "h.v":   Número de diapositiva horizontal . vertical (predeterminado)
+  // - "h/v":   Número de diapositiva horizontal / vertical
+  // - "c":   Número de diapositiva aplanado
+  // - "c/t":   Número de diapositiva aplanado / total de diapositivas
   //
-  // Alternatively, you can provide a function that returns the slide
-  // number for the current slide. The function should take in a slide
-  // object and return an array with one string [slideNumber] or
-  // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+  // Alternativamente, puede proporcionar una función que devuelve el número de diapositiva 
+  // para la diapositiva actual. La función debe recibir un objeto de diapositiva 
+  // y devolver una matriz con una cadena [slideNumber] o 
+  // tres cadenas [n1,delimiter,n2]. Ver #formatSlideNumber().
   slideNumber: false,
 
-  // Can be used to limit the contexts in which the slide number appears
-  // - "all":      Always show the slide number
-  // - "print":    Only when printing to PDF
-  // - "speaker":  Only in the speaker view
+  // Se puede usar para limitar los contextos en los que aparece el número de diapositiva
+  // - "all":      Mostrar siempre el número de diapositiva
+  // - "print":    Solo al imprimir en PDF
+  // - "speaker":  Solo en la vista del presentador
   showSlideNumber: 'all',
 
-  // Use 1 based indexing for # links to match slide number (default is zero
-  // based)
+  // Usar indexación basada en 1 para enlaces # para que coincida con el número de diapositiva 
+  // (el valor predeterminado es cero)
   hashOneBasedIndex: false,
 
-  // Add the current slide number to the URL hash so that reloading the
-  // page/copying the URL will return you to the same slide
+  // Agregar el número de diapositiva actual al hash de la URL para que recargar la 
+  // página/copiar la URL lo devuelva a la misma diapositiva
   hash: false,
 
-  // Flags if we should monitor the hash and change slides accordingly
+  // Indica si debemos monitorear el hash y cambiar las diapositivas en consecuencia
   respondToHashChanges: true,
 
-  // Enable support for jump-to-slide navigation shortcuts
+  // Habilitar atajos de navegacion para saltar a una diapostiva
   jumpToSlide: true,
 
-  // Push each slide change to the browser history.  Implies `hash: true`
+  // Enviar cada cambio de diapositiva al historial del navegador. Supone que `hash: true`
   history: false,
 
-  // Enable keyboard shortcuts for navigation
+  // Habilitar atajos de teclado para la navegación
   keyboard: true,
 
-  // Optional function that blocks keyboard events when retuning false
+  // Función opcional que bloquea los eventos del teclado cuando devuelve falso
   //
-  // If you set this to 'focused', we will only capture keyboard events
-  // for embedded decks when they are in focus
+  // Si establece esto en 'focused', solo capturaremos eventos de teclado
+  // para presentaciones incrustadas cuando estén en foco
   keyboardCondition: null,
 
-  // Disables the default reveal.js slide layout (scaling and centering)
-  // so that you can use custom CSS layout
+  // Deshabilita el diseño predeterminado de la diapositiva reveal.js (escalado y centrado)
+  // para que pueda usar un diseño CSS personalizado
   disableLayout: false,
 
-  // Enable the slide overview mode
+  // Habilitar el modo de vista general de la presentación (overview mode)
   overview: true,
 
-  // Vertical centering of slides
+  // Centrado vertical de las diapositivas
   center: true,
 
-  // Enables touch navigation on devices with touch input
+  // Habilita la navegación táctil en dispositivos con entrada táctil
   touch: true,
 
-  // Loop the presentation
+  // Bucle la presentación
   loop: false,
 
-  // Change the presentation direction to be RTL
+  // Cambiar la dirección de la presentación a RTL
   rtl: false,
 
-  // Changes the behavior of our navigation directions.
+  // Cambia el comportamiento de nuestras direcciones de navegación.
   //
   // "default"
-  // Left/right arrow keys step between horizontal slides, up/down
-  // arrow keys step between vertical slides. Space key steps through
-  // all slides (both horizontal and vertical).
+  // Las teclas de flecha izquierda/derecha avanzan entre diapositivas horizontales, 
+  // las teclas de flecha arriba/abajo avanzan entre diapositivas verticales. 
+  // La barra espaciadora avanza a través de todas las diapositivas (tanto horizontales como verticales).
   //
   // "linear"
-  // Removes the up/down arrows. Left/right arrows step through all
-  // slides (both horizontal and vertical).
+  // Elimina las flechas arriba/abajo. Las flechas izquierda/derecha avanzan a través de todas 
+  // las diapositivas (tanto horizontales como verticales).
   //
   // "grid"
-  // When this is enabled, stepping left/right from a vertical stack
-  // to an adjacent vertical stack will land you at the same vertical
-  // index.
+  // Cuando esto está habilitado, avanzar izquierda/derecha desde una pila vertical 
+  // a una pila vertical adyacente lo llevará al mismo índice vertical.
   //
-  // Consider a deck with six slides ordered in two vertical stacks:
+  // Considere una presentación con seis diapositivas ordenadas en dos pilas verticales:
   // 1.1    2.1
   // 1.2    2.2
   // 1.3    2.3
   //
-  // If you're on slide 1.3 and navigate right, you will normally move
-  // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
-  // from 1.3 -> 2.3.
+  // Si está en la diapositiva 1.3 y navega a la derecha, normalmente se moverá 
+  // de 1.3 -> 2.1. Si se usa "grid", la misma navegación lo lleva 
+  // de 1.3 -> 2.3.
   navigationMode: 'default',
 
-  // Randomizes the order of slides each time the presentation loads
+  // Aleatoriza el orden de las diapositivas cada vez que se carga la presentación
   shuffle: false,
 
-  // Turns fragments on and off globally
+  // Activa y desactiva los fragmentos globalmente
   fragments: true,
 
-  // Flags whether to include the current fragment in the URL,
-  // so that reloading brings you to the same fragment position
+  // Indica si se debe incluir el fragmento actual en la URL,
+  // para que al recargar lo lleve a la misma posición del fragmento
   fragmentInURL: true,
 
-  // Flags if the presentation is running in an embedded mode,
-  // i.e. contained within a limited portion of the screen
+  // Indica si la presentación se está ejecutando en un modo incrustado,
+  // es decir, contenido dentro de una porción limitada de la pantalla
   embedded: false,
 
-  // Flags if we should show a help overlay when the question-mark
-  // key is pressed
+  // Indica si se debe mostrar una dialogo de ayuda cuando se presiona la tecla de interrogación
   help: true,
 
-  // Flags if it should be possible to pause the presentation (blackout)
+  // Indica si debería ser posible pausar la presentación (blackout)
   pause: true,
 
-  // Flags if speaker notes should be visible to all viewers
+  // Indica si las notas del orador deben ser visibles para todos los espectadores
   showNotes: false,
 
-  // Global override for autolaying embedded media (video/audio/iframe)
-  // - null:   Media will only autoplay if data-autoplay is present
-  // - true:   All media will autoplay, regardless of individual setting
-  // - false:  No media will autoplay, regardless of individual setting
+  // Anulación global para la reproducción automática de medios incrustados (video/audio/iframe)
+  // - null:   Los medios solo se reproducirán automáticamente si está presente data-autoplay
+  // - true:   Todos los medios se reproducirán automáticamente, independientemente de la configuración individual
+  // - false:  Ningún medio se reproducirá automáticamente, independientemente de la configuración individual
   autoPlayMedia: null,
 
-  // Global override for preloading lazy-loaded iframes
-  // - null:   Iframes with data-src AND data-preload will be loaded when within
-  //           the viewDistance, iframes with only data-src will be loaded when visible
-  // - true:   All iframes with data-src will be loaded when within the viewDistance
-  // - false:  All iframes with data-src will be loaded only when visible
+  // Anulación global para la precarga de iframes cargados diferidamente
+  // - null:   Los iframes con data-src Y data-preload se cargarán cuando estén dentro 
+  //           de la viewDistance, los iframes con solo data-src se cargarán cuando sean visibles
+  // - true:   Todos los iframes con data-src se cargarán cuando estén dentro de la viewDistance
+  // - false:  Todos los iframes con data-src solo se cargarán cuando sean visibles
   preloadIframes: null,
 
-  // Can be used to globally disable auto-animation
+  // Se puede usar para deshabilitar globalmente la animación automática
   autoAnimate: true,
 
-  // Optionally provide a custom element matcher that will be
-  // used to dictate which elements we can animate between.
+  // Opcionalmente, proporcione un comparador de elementos personalizado que se 
+  // utilizará para dictar qué elementos podemos animar entre sí.
   autoAnimateMatcher: null,
 
-  // Default settings for our auto-animate transitions, can be
-  // overridden per-slide or per-element via data arguments
+  // Configuración predeterminada para nuestras transiciones de animación automática, 
+  // se puede anular por diapositiva o por elemento a través de argumentos de datos
   autoAnimateEasing: 'ease',
   autoAnimateDuration: 1.0,
   autoAnimateUnmatched: true,
 
-  // CSS properties that can be auto-animated. Position & scale
-  // is matched separately so there's no need to include styles
-  // like top/right/bottom/left, width/height or margin.
+  // Propiedades CSS que se pueden animar automáticamente. Posición y escala 
+  // se comparan por separado, por lo que no es necesario incluir estilos 
+  // como top/right/bottom/left, width/height o margin.
   autoAnimateStyles: [
     'opacity',
     'color',
@@ -190,91 +187,91 @@ Reveal.initialize({
     'outline-offset',
   ],
 
-  // Controls automatic progression to the next slide
-  // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
-  //           is present on the current slide or fragment
-  // - 1+:     All slides will progress automatically at the given interval
-  // - false:  No auto-sliding, even if data-autoslide is present
+  // Controla la progresión automática a la siguiente diapositiva
+  // - 0:      El deslizamiento automático solo ocurre si el atributo HTML data-autoslide 
+  //           está presente en la diapositiva o fragmento actual
+  // - 1+:     Todas las diapositivas progresarán automáticamente en el intervalo dado
+  // - false:  No hay deslizamiento automático, incluso si está presente data-autoslide
   autoSlide: 0,
 
-  // Stop auto-sliding after user input
+  // Detener el deslizamiento automático después de la entrada del usuario
   autoSlideStoppable: true,
 
-  // Use this method for navigation when auto-sliding (defaults to navigateNext)
+  // Use este método para la navegación cuando se realiza un deslizamiento automático (el valor predeterminado es navigateNext)
   autoSlideMethod: null,
 
-  // Specify the average time in seconds that you think you will spend
-  // presenting each slide. This is used to show a pacing timer in the
-  // speaker view
+  // Especifique el tiempo promedio en segundos que cree que pasará 
+  // presentando cada diapositiva. Esto se usa para mostrar un temporizador en 
+  // la vista del presentador
   defaultTiming: null,
 
-  // Enable slide navigation via mouse wheel
+  // Habilitar la navegación por diapositivas con la rueda del ratón
   mouseWheel: false,
 
-  // Opens links in an iframe preview overlay
-  // Add `data-preview-link` and `data-preview-link="false"` to customise each link
-  // individually
+  // Abre enlaces en una superposición de vista previa del iframe
+  // Agregue `data-preview-link` y `data-preview-link="false"` para personalizar cada enlace
+  // individualmente
   previewLinks: false,
 
-  // Exposes the reveal.js API through window.postMessage
+  // Expone la API reveal.js a través de window.postMessage
   postMessage: true,
 
-  // Dispatches all reveal.js events to the parent window through postMessage
+  // Despacha todos los eventos reveal.js a la ventana principal a través de postMessage
   postMessageEvents: false,
 
-  // Focuses body when page changes visibility to ensure keyboard shortcuts work
+  // Centra el cuerpo cuando la visibilidad de la página cambia para garantizar que funcionen los atajos de teclado
   focusBodyOnPageVisibilityChange: true,
 
-  // Transition style
+  // Estilo de transición
   transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-  // Transition speed
+  // Velocidad de transición
   transitionSpeed: 'default', // default/fast/slow
 
-  // Transition style for full page slide backgrounds
+  // Estilo de transición para fondos de diapositiva de página completa
   backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
 
-  // The maximum number of pages a single slide can expand onto when printing
-  // to PDF, unlimited by default
+  // El número máximo de páginas que una sola diapositiva puede expandirse al guardar
+  // a PDF, ilimitado de forma predeterminada
   pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
 
-  // Prints each fragment on a separate slide
+  // Imprime cada fragmento en una diapositiva separada
   pdfSeparateFragments: true,
 
-  // Offset used to reduce the height of content within exported PDF pages.
-  // This exists to account for environment differences based on how you
-  // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
-  // on precisely the total height of the document whereas in-browser
-  // printing has to end one pixel before.
+  // Desplazamiento utilizado para reducir la altura del contenido dentro de las páginas PDF exportadas.
+  // Esto existe para tener en cuenta las diferencias ambientales según cómo
+  // imprime en PDF. Las opciones de impresión de CLI, como phantomjs y wkpdf, pueden terminar
+  // precisamente en la altura total del documento, mientras que la impresión en el navegador
+  // debe terminar un píxel antes.
   pdfPageHeightOffset: -1,
 
-  // Number of slides away from the current that are visible
+  // Número de diapositivas alejadas de la actual que son visibles
   viewDistance: 3,
 
-  // Number of slides away from the current that are visible on mobile
-  // devices. It is advisable to set this to a lower number than
-  // viewDistance in order to save resources.
+  // Número de diapositivas alejadas de la actual que son visibles en dispositivos móviles.
+  // Es aconsejable establecer esto en un número menor que 
+  // viewDistance para ahorrar recursos.
   mobileViewDistance: 2,
 
-  // The display mode that will be used to show slides
+  // El modo de visualización que se utilizará para mostrar diapositivas
   display: 'block',
 
-  // Hide cursor if inactive
+  // Ocultar cursor si está inactivo
   hideInactiveCursor: true,
 
-  // Time before the cursor is hidden (in ms)
+  // Tiempo antes de que se oculte el cursor (en ms)
   hideCursorTime: 5000,
 });
 ```
 
-## Reconfiguring
+## Reconfiguración
 
-The configuration can be updated after initialization using the `configure` method.
+La configuración se puede actualizar después de la inicialización utilizando el método `configure`.
 
 ```javascript
-// Turn autoSlide off
+// Apaga el autoSlide
 Reveal.configure({ autoSlide: 0 });
 
-// Start auto-sliding every 5s
+// Comienza el auto-sliding cada 5s
 Reveal.configure({ autoSlide: 5000 });
 ```

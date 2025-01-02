@@ -7,25 +7,25 @@ hidden: true
 hide_ads: true
 ---
 
-# Mastering reveal.js
+## Dominando reveal.js
 
 <iframe width="100%" height="405" src="https://www.youtube.com/embed/6-uWaBcqguc?color=white&controls=1&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This video course that will teach you how to everything you need to know to create great looking presentations with reveal.js.
+Este curso en video te enseñará todo lo que necesitas saber para crear presentaciones geniales con reveal.js.
 
-We'll start from the basics of installing reveal.js, creating slides and configuring your presentation. Then we'll work our way up to more interesting topics like presenting syntax highlighted code, animating slide content with Auto-Animate and using the speaker view. In the advanced videos we'll explore the reveal.js JavaScript API, plugin creation and how to customize keyboard bindings. (See [full list of videos](#table-of-contents).)
+Comenzaremos desde los conceptos básicos de instalación de reveal.js, creación de diapositivas y configuración de su presentación. Luego, avanzaremos hacia temas más interesantes como presentar código resaltado, animar el contenido de las diapositivas con Auto-Animate y usar la vista del presentador. En los videos avanzados, exploraremos la API de JavaScript de reveal.js, la creación de plugins y cómo personalizar las asignaciones del teclado. (Vea la [lista completa de videos](#table-of-contents).)
 
-### Who is this for?
+### ¿A quién va dirigido?
 
-The course is aimed at people who are new to reveal.js as well as those of you who already understand the fundamentals but are ready to explore the full feature set.
+El curso está dirigido a personas que son nuevas en reveal.js, así como a aquellos que ya comprenden los fundamentos pero están listos para explorar el conjunto completo de funciones.
 
-You'll need to have a basic understanding of HTML, CSS and JavaScript. HTML is the backbone of reveal.js and used extensively throughout the course. CSS and JavaScript are mostly used for advanced videos on topics such as creating custom themes, working with the reveal.js API and editing the source code.
+Necesitará tener un conocimiento básico de HTML, CSS y JavaScript. HTML es la columna vertebral de reveal.js y se usa ampliamente a lo largo del curso. CSS y JavaScript se utilizan principalmente para videos avanzados sobre temas como la creación de temas personalizados, el trabajo con la API de reveal.js y la edición del código fuente.
 
-### Who is presenting?
+### ¿Quién presenta?
 
-👋 I'm Hakim—a Swedish front-end developer and the creator of reveal.js. I co-founded and am currently working on [Slides.com](https://slides.com)—a presentation platform and graphical editor built on top of reveal.js. Beyond that I love to work on visual demos and experiments at [hakim.se](https://hakim.se).
+👋 Soy Hakim, un desarrollador front-end sueco y el creador de reveal.js. Cofundé y actualmente estoy trabajando en [Slides.com](https://slides.com), una plataforma de presentaciones y un editor gráfico construido sobre reveal.js. Más allá de eso, me encanta trabajar en demos y experimentos visuales en [hakim.se](https://hakim.se).
 
-I released the first version of reveal.js 10 years ago (!) and couldn't have imagined that it would eventually grow to be used by hundreds of thousands of people. I hope you'll join in and experience first hand why so many choose to create their presentations with reveal.js!
+Lanzé la primera versión de reveal.js hace 10 años (!) y no podía haber imaginado que eventualmente crecería para ser utilizado por cientos de miles de personas. ¡Espero que se una de ellas y experimente de primera mano por qué tantos eligen crear sus presentaciones con reveal.js!
 
 <div class="buy-course">
 	<div class="buy-course-thumb">
@@ -50,39 +50,39 @@ I released the first version of reveal.js 10 years ago (!) and couldn't have ima
 </div>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
-The course is sold via [Gumroad](https://gumroad.com/). VAT is added at the time of purchase, if applicable. 100% money back if the course isn't a good fit for you—no questions asked.
+El curso se vende a través de [Gumroad](https://gumroad.com/). El IVA se agrega en el momento de la compra, si corresponde. Devolución del 100% del dinero si el curso no es adecuado para usted, sin preguntas.
 
-## Table of Contents
+## Tabla de contenido
 
-The course is divided into relatively short videos so that you can easily skip topics that aren't relevant to you or that you are already familiar with. The total runtime is 5.5 hours.
+El curso está dividido en videos relativamente cortos para que pueda omitir fácilmente temas que no sean relevantes para usted o con los que ya esté familiarizado. La duración total es de 5.5 horas.
 
-| Getting Started                                                    | <!-- --> |
-| :----------------------------------------------------------------- | -------: |
-| **Getting Started**                                                | Duration |
-| &nbsp; Installing reveal.js and setting up the development server. |     5:40 |
-| &nbsp; Creating slides, linking between them and saving drafts.    |    10:04 |
-| &nbsp; Configuring your presentation.                              |     8:23 |
-| &nbsp; Working with vertical slides.                               |     9:05 |
-| &nbsp; Creating slides using Markdown.                             |    16:34 |
-| **Content Creation**                                               |
-| &nbsp; Adding text, images, videos and iframes to your slides.     |    10:47 |
-| &nbsp; Layout slide content using stacks and auto-sized text.      |    13:58 |
-| &nbsp; Fullscreen background images, videos, colors and iframes.   |    16:26 |
-| &nbsp; Presenting syntax highlighted code.                         |    21:51 |
-| &nbsp; Using Fragments to build up slides in steps.                |    13:14 |
-| &nbsp; Animating slide content with Auto-Animate.                  |    17:01 |
-| **Configuration & Features**                                       |
-| &nbsp; Presentation size and scale.                                |    14:34 |
-| &nbsp; Slide transitions.                                          |    12:36 |
-| &nbsp; Theming your content and creating your own theme.           |    16:12 |
-| &nbsp; Speaker notes & using the speaker view.                     |    11:27 |
-| &nbsp; Slide numbers & URLs.                                       |    19:55 |
-| &nbsp; Converting your presentation to PDF.                        |    10:23 |
-| **Advanced (JS)**                                                  |
-| &nbsp; Initialization & running multiple presentations.            |    19:06 |
-| &nbsp; Plugins; where to find and how to create them.              |    14:52 |
-| &nbsp; Using the reveal.js API to control your presentation.       |    40:32 |
-| &nbsp; Customizing keyboard shortcuts.                             |    15:04 |
-| &nbsp; Working with the source code.                               |    21:09 |
+| Introducción                                                                 | <!-- --> |
+| :--------------------------------------------------------------------------- | --------:|
+| **Introducción**                                                             | Duración |
+| &nbsp; Instalación de reveal.js y configuración del servidor de desarrollo.  |     5:40 |
+| &nbsp; Creación de diapositivas, enlace entre ellas y guardado de borradores.|    10:04 |
+| &nbsp; Configuración de su presentación.                                     |     8:23 |
+| &nbsp; Trabajar con diapositivas verticales.                                 |     9:05 |
+| &nbsp; Creación de diapositivas usando Markdown.                             |    16:34 |
+| **Creación de contenido**                                                    |          |
+| &nbsp; Agregar texto, imágenes, videos e iframes a sus diapositivas.         |    10:47 |
+| &nbsp; Diseño del contenido de la diapositiva                                |    13:58 |
+| &nbsp; Imágenes, videos, colores e iframes de fondo de pantalla completa.    |    16:26 |
+| &nbsp; Presentación de código resaltado por sintaxis.                        |    21:51 |
+| &nbsp; Uso de Fragmentos para construir diapositivas en pasos.               |    13:14 |
+| &nbsp; Animación del contenido de la diapositiva con Auto-Animate.           |    17:01 |
+| **Configuración y características**                                          |          |
+| &nbsp; Tamaño y escala de la presentación.                                   |    14:34 |
+| &nbsp; Transiciones de diapositivas.                                         |    12:36 |
+| &nbsp; Tematización de su contenido y creación de su propio tema.            |    16:12 |
+| &nbsp; Notas del presentador y uso de la vista del presentador.              |    11:27 |
+| &nbsp; Números de diapositiva y URLs.                                        |    19:55 |
+| &nbsp; Conversión de su presentación a PDF.                                  |    10:23 |
+| **Avanzado (JS)**                                                            |          |
+| &nbsp; Inicialización y ejecución de múltiples presentaciones.               |    19:06 |
+| &nbsp; Plugins; dónde encontrarlos y cómo crearlos.                     |    14:52 |
+| &nbsp; Uso de la API de reveal.js para controlar su presentación.            |    40:32 |
+| &nbsp; Personalización de atajos de teclado.                                 |    15:04 |
+| &nbsp; Trabajando con el código fuente.                                      |    21:09 |
 
 {.toc .hide-header}
